@@ -1,0 +1,170 @@
+.advantages {
+  background-color: #ffffff;
+
+  &__frame {
+    padding: 55px 0;
+    z-index: 0;
+    position: relative;
+
+  }
+
+  &__subtitle {
+
+  }
+
+  &__list {
+
+  }
+
+  &__item {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__outside-caption {
+    display: none;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+
+    .advantages-card__title {
+      text-decoration: underline;
+    }
+
+    &:hover {
+      .advantages-card__title {
+        text-decoration: none;
+      }
+    }
+
+  }
+}
+
+.advantages-card {
+  background-color: #F3F3F3;
+  position: relative;
+  transition: background-color .2s ease;
+  cursor: pointer;
+
+  &__image {
+    width: 68px;
+    height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 6px solid #FFB71B;
+    background-color: #fff;
+    position: absolute;
+    top: 18px;
+    left: -6px;
+
+  }
+
+  &__icon {
+    width: 42px;
+    height: 35px;
+
+    .icon {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__info {
+    padding: 24px 16px 24px 72px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2B2831;
+    padding-bottom: 16px;
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #2B2831;
+    text-decoration: none;
+  }
+  &:hover {
+    background-color: #FFB71B;
+  }
+}
+
+@media (min-width: 1400px) {
+  .advantages {
+
+    &__frame {
+      padding: 88px 0;
+    }
+
+    &__content {
+      position: relative;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -36px;
+    }
+
+    &__item {
+      flex-basis: calc(100%/3);
+      margin-bottom: 0;
+      padding: 12px 36px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__outside-caption {
+      display: block;
+      font-weight: 700;
+      font-size: 96px;
+      line-height: 100px;
+      color: #858585;
+      opacity: 0.1;
+      writing-mode: vertical-lr;
+      position: absolute;
+      top: 0;
+      right: -110px;
+    }
+  }
+
+  .advantages-card {
+    min-height: 248px;
+
+    &__title {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &__description {
+      font-size: 16px;
+    }
+
+    &__info {
+      padding: 40px 24px 40px  48px;
+    }
+
+    &__image {
+      width: 72px;
+      height: 72px;
+      top: 34px;
+      left: -53px;
+      padding: 5px;
+    }
+
+    &__icon {
+      width: 56px;
+      height: 45px;
+    }
+  }
+}

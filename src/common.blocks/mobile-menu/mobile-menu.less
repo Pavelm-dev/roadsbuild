@@ -1,0 +1,165 @@
+.mobile-menu {
+  height: 100vh;
+  width: 100%;
+  background-color: #2B2831;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  transform: translateX(-100%);
+  transition: transform .1s ease;
+
+  &__frame {
+    padding: 0 15px;
+  }
+
+  &__navigation {
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__item {
+    padding-top: 16px;
+
+    &:first-child {
+      padding-top: 72px;
+    }
+  }
+
+  a {
+
+  }
+
+  &__download {
+    padding-top: 30px;
+
+    .download-link {
+      justify-content: flex-start;
+    }
+  }
+
+  &__contacts {
+    padding-top: 35px;
+  }
+
+  &.is-open {
+    z-index: 5;
+    transform: translateX(0);
+    overflow-y: scroll;
+  }
+}
+
+.menu-item {
+  display: block;
+
+  &__header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+  }
+
+  &__caption {
+    padding-right: 8px;
+    overflow-x: hidden;
+  }
+
+  &__underline {
+    height: 2px;
+    width: 100%;
+    background-color: #FFB71B;
+    transform: translateX(-100%);
+    transition: transform .2s ease;
+  }
+
+  &__arrow {
+
+    .icon {
+      fill: #ffffff;
+      width: 12px;
+      height: 8px;
+      transition: transform .2s ease;
+    }
+  }
+
+  &__category-list {
+    margin-top: 0;
+    transition: margin-top .2s ease;
+
+  }
+
+  &__link {
+    display: block;
+    padding: 0;
+    margin: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: color .2s ease, background-color .2s ease, opacity .2s ease-out;
+
+    &:hover {
+      color: #FFB71B;
+      background-color: #3A3A47;
+    }
+  }
+
+  &.is-open {
+    .menu-item__underline {
+      transform: translateX(0);
+    }
+
+    .menu-item__arrow .icon {
+      transform: rotate(540deg);
+    }
+    .menu-item__link {
+      padding: 10px 23px 10px 23px;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+    }
+    .menu-item__category-list {
+      margin: 16px -15px 0;
+    }
+  }
+
+}
+
+.contacts-frame {
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__image {
+
+    .icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__number {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 5px;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+

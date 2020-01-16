@@ -1,0 +1,38 @@
+.difference {
+
+  &__frame {
+    padding: 45px 0 55px;
+  }
+
+  &__image {
+    display: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  .difference {
+
+    &__frame {
+      padding: 88px 120px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__image {
+      display: block;
+      height: 373px;
+
+      img {
+        max-height: 100%;
+        max-width: 100%;
+      }
+    }
+
+    &__text {
+      .section-description {
+        max-width: 576px;
+      }
+    }
+  }
+}
